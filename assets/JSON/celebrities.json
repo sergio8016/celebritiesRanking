@@ -1,0 +1,52 @@
+{
+  "celebrities": [
+    {
+      "name": "Mark Zuckerberg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "thumbsUp": 8,
+      "thumbsDown": 3,
+      "period": 1,
+      "industry": "Technology",
+      "image": "./assets/images/mark.jpg",
+      "id": 1,
+      "thumbsUpSelected": false,
+      "thumbsDownSelected": false
+    },
+    {
+      "name": "Kanye West",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "thumbsUp": 3,
+      "thumbsDown": 8,
+      "period": 1,
+      "industry": "Technology",
+      "image": "./assets/images/kayne.jpg",
+      "id": 2,
+      "thumbsUpSelected": false,
+      "thumbsDownSelected": false
+    },
+    {
+      "name": "Cristina Fernández de Kirchner",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "thumbsUp": 40,
+      "thumbsDown": 20,
+      "period": 1,
+      "industry": "Technology",
+      "image": "./assets/images/cristina.jpg",
+      "id": 3,
+      "thumbsUpSelected": false,
+      "thumbsDownSelected": false
+    },
+    {
+      "name": "Malala Yousafzai",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "thumbsUp": 4,
+      "thumbsDown": 6,
+      "period": 1,
+      "industry": "Technology",
+      "image": "./assets/images/malala.jpg",
+      "id": 4,
+      "thumbsUpSelected": false,
+      "thumbsDownSelected": false
+    }
+  ]
+}
