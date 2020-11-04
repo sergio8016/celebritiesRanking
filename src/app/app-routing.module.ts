@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'lading',
+    path: 'landing',
     loadChildren: () => import('./modules/main/landing.module').then(m => m.LandingModule),
   },
   {
