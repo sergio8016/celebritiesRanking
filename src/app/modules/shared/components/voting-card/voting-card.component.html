@@ -4,10 +4,10 @@
     <div class="info-container">
       <div class="status">
         <div class="icon-wrapper">
-          <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+          <img class="thumbs-up" src="./assets/images/thumbsup.png" alt="thumbsup"
                *ngIf="participant.thumbsUp > participant.thumbsDown"
           >
-          <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+          <img class="thumbs-down" src="./assets/images/thumbsdown.png" alt="thumbsdown"
                *ngIf="participant.thumbsUp < participant.thumbsDown"
           >
         </div>
@@ -24,13 +24,13 @@
         </p>
         <div class="wrapper">
           <div class="icon-wrapper" *ngIf="!voted">
-            <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+            <img class="thumbs-up" src="./assets/images/thumbsup.png" alt="thumbsup"
                  (click)="onThumbClick('up', participant);"
                  [ngClass]="{'active': participant.thumbsUpSelected}"
             >
           </div>
           <div class="icon-wrapper" *ngIf="!voted">
-            <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+            <img class="thumbs-down" src="./assets/images/thumbsdown.png" alt="thumbsdown"
                  (click)="onThumbClick('down', participant);"
                  [ngClass]="{'active': participant.thumbsDownSelected}"
             >
@@ -45,7 +45,7 @@
     <div class="vote-progress">
       <div class="thumbsUp" [ngStyle]="{'width': thumbsUpPercentage + '%'}">
         <strong>
-          <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+          <img class="thumbs-up" src="./assets/images/thumbsup.png" alt="thumbsup"
           >
           <span>
           {{thumbsUpPercentage | number: '1.0-0'}}%
@@ -57,7 +57,7 @@
           <span>
           {{thumbsDownPercentage | number: '1.0-0'}}%
         </span>
-          <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+          <img class="thumbs-down" src="./assets/images/thumbsdown.png" alt="thumbsdown"
           >
         </strong>
       </div>
