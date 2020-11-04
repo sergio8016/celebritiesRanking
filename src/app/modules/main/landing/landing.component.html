@@ -1,0 +1,87 @@
+<section class="landing">
+  <main class="main">
+    <app-navbar></app-navbar>
+    <img class="background-image" src="./assets/images/main.jpg" alt="main">
+    <div class="main-card">
+      <div class="content">
+        <p class="question">
+          What is your opinion on
+        </p>
+        <h1>
+          <strong>
+            Pope Francis?
+          </strong>
+        </h1>
+        <p class="information">
+          He's talking though on clergy sexual abuse, but is he another papal pervert protector? (thumbs down) or a true
+          pedophile punishing pontiff? (thumbs up)
+        </p>
+        <p class="more">
+          <em class="fab fa-wikipedia-w"></em>
+          <a href="">More Information</a>
+        </p>
+        <p>
+          <strong>
+            What is your verdict?
+          </strong>
+        </p>
+      </div>
+      <div class="thumbs">
+        <div class="thumbs-up-container">
+          <img class="thumbs-up" src="../../../../assets/images/thumbsup.png" alt="thumbsup">
+        </div>
+        <div class="thumbs-down-container">
+          <img class="thumbs-down" src="../../../../assets/images/thumbsdown.png" alt="thumbsdown">
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="hero">
+    <div class="announcement">
+      <div class="title">
+        <span>Speak out. Be heard.</span>
+        <h1 class="be">
+          <strong>
+            Be counted
+          </strong>
+        </h1>
+      </div>
+      <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti doloribus earum eveniet ipsum libero magnam
+        minima, nam nemo nesciunt nisi possimus quod sint sit suscipit tempore temporibus vel veritatis voluptate!
+      </div>
+
+      <div class="close">
+        X
+      </div>
+    </div>
+
+    <h1 class="votes">
+      Votes
+    </h1>
+
+    <div class="participants">
+      <app-voting-card
+        *ngFor="let participant of participants"
+        [participant]="participant"
+        (update)="update($event);"
+      ></app-voting-card>
+    </div>
+
+    <div class="new-participants">
+      <div class="background"></div>
+      <div class="content">
+        <div class="text">
+          Is there anyone else you would want us to add?
+        </div>
+        <div class="submit">
+          <button class="submit-button">
+            Submit a name
+          </button>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</section>
+<app-snack-bar [message]="message"></app-snack-bar>

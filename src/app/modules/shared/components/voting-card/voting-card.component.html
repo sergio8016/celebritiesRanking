@@ -1,0 +1,66 @@
+<div class="voting-card">
+  <img class="voting-card-image" [src]="participant.image" [alt]="participant.name">
+  <div class="info-wrapper">
+    <div class="info-container">
+      <div class="status">
+        <div class="icon-wrapper">
+          <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+               *ngIf="participant.thumbsUp > participant.thumbsDown"
+          >
+          <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+               *ngIf="participant.thumbsUp < participant.thumbsDown"
+          >
+        </div>
+      </div>
+      <div class="description">
+        <h1 class="name">
+          {{participant.name}}
+        </h1>
+        <small>
+          <strong>{{participant.period}} month ago </strong>in {{participant.industry}}
+        </small>
+        <p>
+          {{participant.description}}
+        </p>
+        <div class="wrapper">
+          <div class="icon-wrapper" *ngIf="!voted">
+            <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+                 (click)="onThumbClick('up', participant);"
+                 [ngClass]="{'active': participant.thumbsUpSelected}"
+            >
+          </div>
+          <div class="icon-wrapper" *ngIf="!voted">
+            <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+                 (click)="onThumbClick('down', participant);"
+                 [ngClass]="{'active': participant.thumbsDownSelected}"
+            >
+          </div>
+
+          <button class="voting-button" (click)="vote();">
+            {{voted ? 'Vote again' : 'Vote now'}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="vote-progress">
+      <div class="thumbsUp" [ngStyle]="{'width': thumbsUpPercentage + '%'}">
+        <strong>
+          <img class="thumbs-up" src="../../../../../assets/images/thumbsup.png" alt="thumbsup"
+          >
+          <span>
+          {{thumbsUpPercentage | number: '1.0-0'}}%
+        </span>
+        </strong>
+      </div>
+      <div class="thumbsDown" [ngStyle]="{'width': thumbsDownPercentage + '%'}">
+        <strong>
+          <span>
+          {{thumbsDownPercentage | number: '1.0-0'}}%
+        </span>
+          <img class="thumbs-down" src="../../../../../assets/images/thumbsdown.png" alt="thumbsdown"
+          >
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>

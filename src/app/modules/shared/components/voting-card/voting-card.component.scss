@@ -1,0 +1,134 @@
+.voting-card {
+  position: relative;
+  width: 50%;
+  display: inline-flex;
+  padding: 10px;
+
+  .voting-card-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .info-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #EBEBEB;
+    width: 100%;
+
+    .info-container {
+      width: 100%;
+      display: flex;
+
+      .status {
+        width: 10%;
+
+        .icon-wrapper {
+          display: inline;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          padding-right: 20px;
+
+          .thumbs-up,
+          .thumbs-down {
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+          }
+
+          .thumbs-up {
+            background-color: #1CBBB4;
+          }
+
+          .thumbs-down {
+            background-color: #FFAD1D;
+          }
+        }
+      }
+
+      .description {
+        width: 90%;
+
+        .name {
+          margin-top: 0;
+        }
+
+        .wrapper {
+          display: inline-flex;
+
+          .icon-wrapper {
+            display: inline;
+            padding-right: 20px;
+
+            .thumbs-up,
+            .thumbs-down {
+              padding: 5px;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+
+              &.active {
+                transform: scale(1.5);
+              }
+            }
+
+            .thumbs-up {
+              background-color: #1CBBB4;
+              border: 2px solid #EBEBEB;
+            }
+
+            .thumbs-down {
+              background-color: #FFAD1D;
+            }
+          }
+        }
+
+
+        .voting-button {
+          background-color: transparent;
+          border-color: #EBEBEB;
+          color: #EBEBEB;
+          cursor: pointer;
+          padding: 7px;
+          outline: inherit;
+          appearance: none;
+          border-style: solid;
+        }
+      }
+    }
+
+    .vote-progress {
+      height: 50px;
+      width: calc(100% - 20px);
+      margin-top: 20px;
+
+      .thumbsUp,
+      .thumbsDown {
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        opacity: 0.9;
+        padding: 0 5px;
+        cursor: pointer;
+      }
+
+      .thumbsUp {
+        background-color: #1CBBB4;
+      }
+
+      .thumbsDown {
+        background-color: #FFAD1D;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .voting-card {
+    width: 100% !important;
+    padding: 0;
+  }
+}

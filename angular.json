@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "celebritiesRanking"
+    }
+  },
+  "defaultProject": "celebritiesRanking",
+  "cli": {
+    "analytics": "6a05b416-bf45-4ec5-a52a-f5604a2c988b"
+  }
 }
